@@ -4,3 +4,9 @@ c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStu
 c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.csprojResolveAssemblyReference.cache
 c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.exe
 c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.pdb
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.exe.config
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.exe
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.pdb
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.exe
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.pdb
+C:\Users\Volodya\Documents\GitHub\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.csprojResolveAssemblyReference.cache

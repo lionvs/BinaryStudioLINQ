@@ -42,6 +42,9 @@ namespace BinaryStudioLINQ
 
                 works.Add(new TestWork() { CurrTest = tests[i%20], Result = random , TestUser = users[i%20], TimeUsed = TimeSpan.FromMinutes(random1) });
             }
+            works.Add(new TestWork() { CurrTest = tests[3], Result = 3, TestUser = users[0], TimeUsed = TimeSpan.FromMinutes(3) });
+            works.Add(new TestWork() { CurrTest = tests[3], Result = 301, TestUser = users[0], TimeUsed = TimeSpan.FromMinutes(3) });
+            works.Add(new TestWork() { CurrTest = tests[4], Result = 3, TestUser = users[0], TimeUsed = TimeSpan.FromMinutes(3) });
         }
         static void Main(string[] args)
         {
@@ -96,32 +99,46 @@ namespace BinaryStudioLINQ
 
             Console.WriteLine("\nStudent results\n");
 
-            foreach (var student in users)
+            var groupedWorks = works.GroupBy(x => new { x.TestUser, x.CurrTest.TestCategory})
+                    .Select(y => new 
+                    {   
+                        User = y.Key.TestUser,
+                        Category = y.Key.TestCategory,
+                        Time = y.Aggregate(new TimeSpan(0), (p, v) => p.Add(v.TimeUsed)),
+                        Result = y.Sum(s => s.Result),
+                        Percent = y.Sum(s => s.Result) * 100.0 / works.Where(work => work.TestUser == y.Key.TestUser).Sum(work => work.Result)
+                    }
+                    );
+            foreach (var work in groupedWorks)
             {
-                var result1 = works.Where(work => work.TestUser ==student ).GroupBy(work => work.CurrTest.TestCategory)
-    .Select(
-        g => new
-        {
-            Key = g.Key,
-            Result = g.Sum(s => s.Result),
-            //Time = g.Sum(s => s.TimeUsed),
-            Category = g.First().CurrTest.TestCategory
-        });
-                //var result = from work in works
-                //             where work.TestUser == student
-                //            // group work by work.TestUser into q
-                //             select new
-                //             {
-                //                 res = work.Result,
-                //                 time = work.TimeUsed,
-                //                 percent = (double)work.Result / (double)work.CurrTest.MarkNeeded,
-                //                 cat = work.CurrTest.TestCategory
-                //             }; 
-                foreach (var stud in result1)
-                {
-                    Console.WriteLine("{2}: \t Mark: {0} , Time: {1} ", stud.Result, stud.Category,student.Name);
-                }
+                Console.WriteLine("{0} - {1} - {2} - {3} - {4}", work.User.Name, work.Category, work.Result, work.Time, work.Percent);
             }
+//            foreach (var student in users)
+//            {
+//                var result1 = works.Where(work => work.TestUser ==student ).GroupBy(work => work.CurrTest.TestCategory)
+//    .Select(
+//        g => new
+//        {
+//            Key = g.Key,
+//            Result = g.Sum(s => s.Result),
+//            //Time = g.Sum(s => s.TimeUsed),
+//            Category = g.First().CurrTest.TestCategory
+//        });
+//                //var result = from work in works
+//                //             where work.TestUser == student
+//                //            // group work by work.TestUser into q
+//                //             select new
+//                //             {
+//                //                 res = work.Result,
+//                //                 time = work.TimeUsed,
+//                //                 percent = (double)work.Result / (double)work.CurrTest.MarkNeeded,
+//                //                 cat = work.CurrTest.TestCategory
+//                //             }; 
+//                foreach (var stud in result1)
+//                {
+//                    Console.WriteLine("{2}: \t Mark: {0} , Time: {1} ", stud.Result, stud.Category,student.Name);
+//                }
+//            }
             
         }
     }
