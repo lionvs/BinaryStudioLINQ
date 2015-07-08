@@ -1,0 +1,6 @@
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.exe.config
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.exe
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\bin\Debug\BinaryStudioLINQ.pdb
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.csprojResolveAssemblyReference.cache
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.exe
+c:\users\яна\documents\visual studio 2013\Projects\BinaryStudioLINQ\BinaryStudioLINQ\obj\Debug\BinaryStudioLINQ.pdb
